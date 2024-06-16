@@ -1,0 +1,13 @@
+@font-face {
+  font-family : "Sofia Sans";
+  src : url("SofiaSans[wght].ttf");
+}
+
+body {
+  margin : 0 0;
+ background-color : black;
+}
+canvas {
+  display : block;
+  
+}
