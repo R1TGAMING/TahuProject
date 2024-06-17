@@ -6,11 +6,11 @@ const config = {
           mode: Phaser.Scale.FIT,
           autoCenter: Phaser.Scale.CENTER_BOTH
         },
-        scene : [scene1],
+        scene : [scene1, scene2, Ingame],
         physics: {
             default: 'arcade',
             arcade: {
-                gravity: { y: 10 },
+                gravity: { y: 0 },
                 debug : false
             },
             
