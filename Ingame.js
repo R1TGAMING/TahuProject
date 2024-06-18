@@ -4,11 +4,10 @@ class Ingame extends Phaser.Scene {
     
     //Player Object
     this.playerObject = {
-      x : 0,
-      y : 0,
       speed : 200,
       health : 3,
     };
+    
   }
   preload() {
 
@@ -16,6 +15,8 @@ class Ingame extends Phaser.Scene {
  
   
   create() {
+    //Import Classes
+    
     //Player Setup
     this.player = this.add.rectangle(config.width / 2,config.height / 2, 64, 64, 0xf00000)
     
@@ -24,18 +25,24 @@ class Ingame extends Phaser.Scene {
     
      //Drag Event
     this.player.setInteractive();
-    this.input.setDraggable(this.player)
-    this.input.on("drag", this.startDrag, this)
+    this.input.setDraggable(this.player);
+    this.input.on("drag", this.startDrag, this);
     
     
   }
   update() {
-    
+    let projectiles = new Projectiles(this, this.player.x, this.player.y - 100);
   }
   //All function
   startDrag(pointer,object,dragX,dragY) {
-    object.x = dragX
-    object.y = dragY
+    object.x = dragX;
+    object.y = dragY;
+    
+      
+    
+    
   }
+  
+  
   
 }
